@@ -3,7 +3,7 @@
 # condiciones de servicio, políticas de privacidad y documentación de soporte
 # documentación.
 
-name: Build and Deploy to GKE
+name: Deploy simple hello app to GKE
 
 on:
   push:
@@ -15,7 +15,6 @@ env:
   GKE_CLUSTER: tf-cluster    # Add your cluster name here.
   GKE_ZONE: us-central1   # Add your cluster zone here.
   DEPLOYMENT_NAME: gke-test # Add your deployment name here.
-  IMAGE: static-site
 
 jobs:
   setup-and-deploy:
