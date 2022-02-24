@@ -13,7 +13,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: tf-cluster    # Add your cluster name here.
-  GKE_ZONE: us-central1-c   # Add your cluster zone here.
+  GKE_ZONE: us-central1   # Add your cluster zone here.
   DEPLOYMENT_NAME: gke-test # Add your deployment name here.
   IMAGE: static-site
 
@@ -42,7 +42,7 @@ jobs:
     - uses: google-github-actions/get-gke-credentials@fb08709ba27618c31c09e014e1d8364b02e5042e
       with:
         cluster_name: tf-cluster
-        location: us-central1-c
+        location: us-central1
         credentials: ${{ secrets.CREDENTIALS_GCP }}
 
     # Build the Docker image
